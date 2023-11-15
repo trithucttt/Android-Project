@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFF"
+    tools:context=".Display.ui.AddQuestion">
+
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/LabelStyle"
+        android:textAlignment="center"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="0dp"
+        android:text="Add Question "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/layout_questionname"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_below="@id/txt_title">
+
+      <EditText
+          android:id="@+id/edt_questionname"
+          style="@style/TextStyle"
+          android:layout_marginTop="15dp"
+          android:layout_below="@id/txt_title"
+          android:hint="Question Name" />
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/layout_choice1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_below="@id/layout_questionname">
+      <EditText
+          android:id="@+id/edt_choice1"
+          android:hint="Option 1"
+          style="@style/TextStyle"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:layout_marginTop="15dp" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_choice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/layout_choice1">
+        <EditText
+            android:id="@+id/edt_choice2"
+            android:hint="Option 2"
+            style="@style/TextStyle"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_choice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/layout_choice2">
+        <EditText
+            android:id="@+id/edt_choice3"
+            android:hint="Option 3"
+            style="@style/TextStyle"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+    android:id="@+id/txt_option"
+    style="@style/TextStyle"
+    android:text="Chose option correct"
+    android:layout_marginTop="15dp"
+    android:layout_below="@id/layout_choice3"/>
+    <RadioGroup
+        android:id="@+id/rdp_Choice"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_option">
+
+        <RadioButton
+            android:id="@+id/rdb_choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1"/>
+
+        <RadioButton
+            android:id="@+id/rdb_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 2"/>
+
+        <RadioButton
+            android:id="@+id/rdb_choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"/>
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Question"
+        android:onClick="AddQuestion"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/rdp_Choice"/>
+
+    <Button
+        android:id="@+id/btn_eddit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:text="Edit"
+        android:layout_below="@id/btn_add"/>
+    <Button
+        android:id="@+id/btn_returnMenuadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:onClick="editQuestion"
+        android:text="Return Menu"
+        android:layout_below="@id/btn_eddit"/>
+
+
+</RelativeLayout>

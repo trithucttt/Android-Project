@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/question"
+        android:label="My Qizzapplication"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyQuizzApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".Display.ui.EditQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".Display.ui.DeleteQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".Display.ui.AddQuestion"
+            android:exported="true" />
+        <activity
+            android:name=".Display.ui.QuizzHome"
+            android:exported="true" />
+        <activity
+            android:name=".Display.ui.Menu"
+            android:exported="true">
+            >
+        </activity>
+        <activity
+            android:name=".Display.ui.Register"
+            android:exported="true" />
+        <activity
+            android:name=".Display.ui.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

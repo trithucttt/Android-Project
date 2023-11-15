@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F5"
+    android:padding="24dp"
+    tools:context=".Display.ui.Menu">
+
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/LabelStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="My Quizz App"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="117dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@mipmap/question"
+        android:layout_below="@id/txt_title"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/choices_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_highscore"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HighScore:0 "
+            android:textAlignment="center"
+            android:layout_below="@id/imageView"/>
+
+        <Button
+            android:id="@+id/btn_start"
+            style="@style/ButtonStyle"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text=" Start" />
+
+        <Button
+            android:id="@+id/btn_logins"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text=" Login" />
+
+
+        <Button
+            android:id="@+id/btn_registers"
+            style="@style/ButtonStyle"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text=" Register" />
+
+        <Button
+            android:id="@+id/btn_addquestion"
+            style="@style/ButtonStyle"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Add Question" />
+
+        <Button
+            android:id="@+id/btn_questionlist"
+            style="@style/ButtonStyle"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Question List" />
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close app"
+            android:textColor="@color/black"
+            android:layout_below="@id/choices_layout"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
